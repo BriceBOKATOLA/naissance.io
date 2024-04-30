@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Francil et Edna</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+  <script src="js/prefixfree.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+  /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300); */
+
+  /* fram  */
+  
+  @keyframes float {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @keyframes shadow {
+    to {
+      transform: scale(1.2);
+    }
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    44% {
+      transform: scale(1.03);
+    }
+    50% {
+      transform: scale(1);
+    }
+    52% {
+      transform: scale(1.04);
+    }
+    58% {
+      transform: scale(1);
+    }
+  }
+  heart {
+    animation: float 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite alternate;
+    position: absolute;
+    z-index: -10;
+  }
+  heart div.beat {
+    animation: heartbeat 1.6s infinite;
+    content: '';
+    display: block;
+  }
+  heart left {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-radius: 100%;
+    content: '';
+    display: block;
+  }
+  heart right {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    transform: translate(70px, -100px);
+  }
+  heart bottom {
+    height: 100px;
+    width: 100px;
+    background: #bd1521;
+    border-bottom-right-radius: 10px;
+    content: '';
+    display: block;
+    transform: rotate(45deg) translate(-92px, -141px);
+  }
+
+  shadow {
+    animation: shadow 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite alternate;
+    background: #c7c7c7;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 175px;
+    left: 60px;
+    height: 12px;
+    width: 50px;
+  }
+
+  love {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-85px, -70px);
+  }
+
+  p {
+    color: #323232;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    left: 20px;
+    position: relative;
+    text-decoration: none;
+    top: 200px;
+  }
+  p:hover {
+    color: #c7c7c7;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>BIENVENUE</h1>
+  <h4>❤️-Prenom de l'enfant-❤️</h4>
+
+  <main class="scene">
+    <div class="actor">
+      <div class="actor__prefix">-</div>
+      <div id="tlx" class="actor__content"></div>
+    </div>
+    <div class="actor">
+      <div class="actor__prefix">-</div>
+      <div id="hyh" class="actor__content"></div>
+    </div>
+
+    <love>
+      <heart>
+        <div class="beat">
+          <a href="#" target="_blank">
+            <left></left>
+            <right></right>
+            <bottom></bottom>
+          </a>
+        </div>
+      </heart>
+      <shadow></shadow>
+    </love>
+
+    <div id="timer">
+      <span id="days"></span>Days
+      <span id="hours"></span>Hours
+      <span id="minutes"></span>Minutes
+      <span id="seconds"></span>Seconds
+    </div>
+  </main>
+
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=0"></iframe>
+
+  <!--<script src='https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js'></script>-->
+  <script src='js/theater.min.js'></script>
+  <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+  <script src='js/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
